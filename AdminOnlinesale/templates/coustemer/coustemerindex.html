@@ -1,0 +1,193 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Online Sales</title>
+<style >
+.hot-container p { margin-top: 10px; }
+a { text-decoration: none; margin: 0 10px; }
+
+.hot-container {
+	min-height: 100px;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+a.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+
+	a.btn:hover {
+		background-color: #e3e3e3;
+		border-color: rgba(0,0,0,0.5);
+	}
+
+	a.btn:active {
+		background-color: #CCC;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+/* blue button */
+
+a.btn.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+
+	a.btn.btn-blue:hover {
+		background-color: #4F87A2;
+		border-color: rgba(0,0,0,0.5);
+	}
+
+	a.btn.btn-blue:active {
+		background-color: #3C677B;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+/* red button */
+
+a.btn.btn-red {
+	background-color: #E48681;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+
+	a.btn.btn-red:hover {
+		background-color: #DA4F49;
+		border-color: rgba(0,0,0,0.5);
+	}
+
+	a.btn.btn-red:active {
+		background-color: #B32C24;
+		border-color: rgba(0,0,0,0.9);
+	}
+</style>
+
+
+  </head>
+  <body>
+
+{% include 'head.html' %}
+<br>
+<br>
+
+<center>
+    <h1 style="font-family: 'Times New Roman';color: #1161ee">Welcome To OnlineSale</h1>
+</center>
+<br>
+
+<center>
+
+    <div class="hot-container">
+	<p>
+		<a href="{% url 'registration' %}" class="btn">REGISTER</a>
+		<a href="{% url 'logincoustmer' %}" class="btn btn-blue">LOGIN</a>
+	</p>
+
+</div>
+
+
+
+</center>
+{% if sucsmsg %}
+ <h1 style="font-family: 'Times New Roman';color: greenyellow">{{ sucsmsg }}</h1>
+<br>
+{% endif %}
+<center>
+    <h1 style="font-family: 'Times New Roman';color: #1161ee">Our Product</h1>
+</center>
+<table align="center">
+    <tr>
+
+
+    <td><div class="card" style="width: 15rem;">
+  <img src="{% static 'images/skybag.jpg' %}" class="card-img-top" alt="...">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">OnlineSale</li>
+    <li class="list-group-item">Skybag</li>
+    <li class="list-group-item">8000/-</li>
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'logincoustmer' %}" class="card-link">Add cart</a>
+    <a href="{% url 'logincoustmer' %}" class="card-link">Purchase</a>
+  </div>
+</div></td>
+
+            <td ><div class="card" style="width: 15rem;">
+  <img src="{% static 'images/samnsung.jpg' %}" class="card-img-top" alt="...">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">OnlineSale</li>
+    <li class="list-group-item">Samsung S8</li>
+    <li class="list-group-item">29,000/-</li>
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'logincoustmer' %}" class="card-link">Add cart</a>
+    <a href="{% url 'logincoustmer' %}" class="card-link">Purchase</a>
+  </div>
+</div></td>
+
+            <td><div class="card" style="width: 15rem;">
+  <img src="{% static 'images/addidas.jpg' %}" class="card-img-top" alt="...">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">OnlineSale</li>
+    <li class="list-group-item">Addidas t-shirt</li>
+    <li class="list-group-item">3000/-</li>
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'logincoustmer' %}" class="card-link">Add cart</a>
+    <a href="{% url 'logincoustmer' %}" class="card-link">Purchase</a>
+  </div>
+</div></td>
+            <td><div class="card" style="width: 15rem;">
+  <img src="{% static 'images/onlinemobile.jpg' %}" class="card-img-top" alt="...">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">OnlineSale</li>
+    <li class="list-group-item">RealMe Xt</li>
+    <li class="list-group-item">18,000/-</li>
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'logincoustmer' %}" class="card-link">Add cart</a>
+    <a href="{% url 'logincoustmer' %}" class="card-link">Purchase</a>
+  </div>
+</div></td>
+
+    </tr>
+
+</table>
+
+
+
+
+
+{% include 'foot.html' %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
